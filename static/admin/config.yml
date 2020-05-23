@@ -23,7 +23,7 @@ collections:
     label: 'Home'
     format: 'json'
     folder: 'assets/content/home'
-    create: true
+    create: false
     editor:
       preview: true
     fields:
