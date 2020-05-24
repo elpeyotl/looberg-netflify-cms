@@ -17,7 +17,7 @@ collections:
         editor:
           preview: true
         preview_path: blog/
-        file: "assets/content/home.yml"
+        file: "assets/content/pages/home.json"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
