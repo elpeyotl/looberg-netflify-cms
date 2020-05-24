@@ -5,9 +5,6 @@ backend:
 media_folder: static/img
 public_folder: /img
 
-publish_mode: editorial_workflow
-site_url: https://localhost:3333
-
 collections:
   - label: "Pages"
     name: "pages"
@@ -17,7 +14,7 @@ collections:
         editor:
           preview: true
         preview_path: blog/
-        file: "assets/content/pages/home.json"
+        file: "assets/content/pages/home.yml"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
