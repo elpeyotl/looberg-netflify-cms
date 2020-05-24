@@ -1,0 +1,192 @@
+
+body {
+    overflow: hidden;
+}
+
+.main-grid {
+    display: grid;
+
+     grid-template:
+        "sidebar" 80px
+        "content" auto /
+        1fr;
+
+    @screen md {
+        grid-template:
+        "sidebar content" auto /
+        1fr     4fr;
+    }
+}
+
+header {
+    grid-area: header;
+    background-color: green;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    transition: width .5s ease-in-out;
+    z-index: 100;
+    position: fixed;
+
+     @screen md {
+         height: 100vh;
+             position: relative;
+
+      }
+
+    &:hover {
+      //  width: 100vw;
+    }
+
+    &--open {
+        width: 100vw;
+    }
+
+
+    &__logo {
+    height: 140px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+    transform: rotate(90deg);
+
+     @screen md {
+         transform: rotate(0);
+         height: 100%;
+         width: 100%;
+      }
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+        }
+    }
+
+
+
+
+}
+
+.main {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url('~assets/images/background.jpg')
+
+}
+
+.main-content {
+    grid-area: content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    overflow-x: hidden;
+
+
+    display: grid;
+    grid-template:
+    "content-left" auto
+    "content-right" auto /
+    minmax(200px, 1fr);
+
+
+
+    @screen md {
+    grid-template:
+    "content-left  content-right" auto /
+    3fr      3fr;
+    }
+
+    @screen lg {
+    grid-template:
+    "content-left .  content-right" auto /
+    2fr     minmax(0, 40px)  3fr;
+    }
+
+
+}
+
+.content-left {
+    grid-area: content-left;
+    display: grid;
+    margin-top: 4.4rem;
+
+
+    @screen md {
+        justify-content: center;
+    }
+
+
+
+}
+
+.content-right {
+    grid-area: content-right;
+
+    display: grid;
+    justify-content: center;
+
+     @screen md {
+        justify-content: center;
+        margin-top: 4.4rem;
+    }
+
+
+}
+
+.news {
+    margin-top: 3rem;
+}
+
+.content {
+    &__heading {
+        text-align: center;
+        margin-bottom: 4.4rem;
+
+        @screen md {
+            text-align: left;
+         }
+
+
+
+    }
+
+    &__element {
+        margin-bottom: 2rem;
+    }
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightblue;
+}
+
+
+.logo {
+    width: auto;
+    height: 100%;
+}
+
+.container {
+    padding: 20px;
+    @screen md{
+        padding: 40px;
+    }
+}
+
+.container--detail {
+    padding: 100px;
+}

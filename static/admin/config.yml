@@ -11,20 +11,10 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        editor:
-          preview: true
-        preview_path: blog/
         file: "assets/content/pages/home.json"
         fields:
-          - {label: Title, name: title, widget: string}
+          - {label: Adresse, name: address, widget: markdown}
           - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
 
   - name: 'blog'
     label: 'Blog'

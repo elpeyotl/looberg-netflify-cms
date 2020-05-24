@@ -1,57 +1,32 @@
 <template>
-  <div class="container">
-    <div>
-     <h1>{{pageContent.title}}</h1>
-     <div v-html="$md.render(pageContent.intro)"></div>
+<div class="main-content">
+    <div class="content-left">
+        <div class="container">
+          <div class="content__heading">
+            <h1>Bildhauerei<br>Grabmale<br>Workshops</h1>
+          </div>
+
+           <div class="content__element">
+            </div>
+        </div>
+
+        {{pageContent}}
     </div>
-  </div>
+</div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 
 export default {
   computed: {
     pageContent () {
-      return this.$store.getters.retrievePage('home')
+      return  this.$store.getters['content/retrievePage']('home')
     }
   },
 };
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>

@@ -59,6 +59,9 @@ export default {
   /*
   ** Build configuration
   */
+ css: [
+    '@/assets/sass/style.scss'
+  ],
   build: {
     /*
     ** You can extend webpack config here
