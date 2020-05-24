@@ -1,10 +1,10 @@
 .tab {
-    margin-top: $spacer;
+    margin-top: 2rem;
     &__heading {
         display: inline-block !important;
         transition: color .5s ease;
         text-decoration: underline;
-        margin-bottom: $spacer;
+        margin-bottom: 2rem;
 
         &:not(:first-child) {
             margin-left: 20px;

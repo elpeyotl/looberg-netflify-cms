@@ -8,19 +8,19 @@
 // @import "~bootstrap/scss/type";
 // @import "~bootstrap/scss/images";
 
-// @import "variables";
+@import "variables";
 
 // //components
 // // @import "../js/components/slider/slider";
 
 
 @import 'layout';
-// @import "links";
+@import "links";
 @import 'typography';
-// @import 'bullets';
-// @import 'offer';
-// @import 'tab';
-// @import 'img-carousel';
-// @import 'detail'
+@import 'bullets';
+@import 'offer';
+@import 'tab';
+@import 'img-carousel';
+@import 'detail'
 
 

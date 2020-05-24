@@ -4,6 +4,11 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: elpeyotl
+    api_key: 268854948165686
 
 collections:
   - label: "Pages"
@@ -13,8 +18,15 @@ collections:
         name: "home"
         file: "assets/content/pages/home.json"
         fields:
+          - {label: Titel, name: title, widget: markdown}
           - {label: Adresse, name: address, widget: markdown}
           - {label: Intro, name: intro, widget: markdown}
+          - label: "Gallery"
+            name: "galleryImages"
+            widget: "list"
+            summary: '{{fields.image}}'
+            field: {label: Image, name: image, widget: image, allow_multiple: true}
+          - {label: Angebottext, name: angebot, widget: markdown}
 
   - name: 'blog'
     label: 'Blog'
