@@ -5,7 +5,30 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+publish_mode: editorial_workflow
+site_url: https://localhost:3333
+
 collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        editor:
+          preview: true
+        preview_path: blog/
+        file: "assets/content/home.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
+
   - name: 'blog'
     label: 'Blog'
     format: 'json'
@@ -14,18 +37,7 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: true
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'home'
-    label: 'Home'
-    format: 'json'
-    folder: 'assets/content/home'
-    create: false
-    editor:
-      preview: true
+    preview_path: blog/
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
