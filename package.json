@@ -16,7 +16,7 @@
     "@nuxtjs/markdownit": "^1.2.9",
     "@nuxtjs/pwa": "^3.0.0-0",
     "nuxt": "^2.0.0",
-    "swiper": "^5.4.1"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0",
